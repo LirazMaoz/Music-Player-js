@@ -65,13 +65,20 @@ $(document).ready(function () {
             $('.active').removeClass('active');
                 $(this).addClass('active')
             var filt = songData.filter(song => song.nameSong == name)
-        
+            audio = new Audio('songs/'+filt[0].author + ' - ' + filt[0].nameSong + '.mp3')
+            console.log(audio);
             $('#audio-info>.title').html(filt[0].nameSong);
             $('#audio-info>.artist').html(filt[0].author);
             $('img.cover').attr('src', 'pics/cover/' + filt[0].image);
-            audio = new Audio('songs/'+filt[0].author + ' - ' + filt[0].nameSong + '.mp3')
-            console.log(audio);
-            audio.play();
+
+            setTimeout(function(){
+                audio.play();
+                $('#play').hide();
+        $('#pause').show();
+        showDuration();
+
+            },500)
+
             $('#play').hide();
             $('#pause').show();
 
@@ -120,8 +127,13 @@ if(key === songData.length){
     key=0
 }
         initAudio();
-        audio.play();
-        showDuration();
+        setTimeout(function(){
+            audio.play();
+            $('#play').hide();
+    $('#pause').show();
+    showDuration();
+
+        },500)
 
     });
 
@@ -133,8 +145,14 @@ if(key === songData.length){
             key=songData.length -1
         }
         initAudio();
-        audio.play();
-        showDuration();
+        setTimeout(function(){
+            audio.play();
+            $('#play').hide();
+    $('#pause').show();
+    showDuration();
+
+        },500)
+
 
     });
 

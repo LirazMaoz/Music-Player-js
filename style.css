@@ -1,4 +1,3 @@
-@import url('Commissioner-VariableFont_wght.ttf');
 
 * {
     outline: none;
@@ -146,9 +145,6 @@ background: white;
     background:url("pics/progress.png") no-repeat ;
     height: 10px;
     display: inline-block;
-    position: absolute;
-    top: 9px;
-    left: 8px;
 
 }
 
