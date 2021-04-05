@@ -170,11 +170,18 @@ if(key === songData.length){
             //Get Seconds & Minutes
             var m = parseInt((audio.currentTime / 60) % 60);
             var s = parseInt(audio.currentTime) % 60;
-            //Add 0 if less than 10
-            if (s < 10) {
-                s = '0' + s;
+            var timeLeft = parseInt(audio.duration) - parseInt(audio.currentTime)
+            var s2 =  timeLeft % 60;
+            m2 = Math.floor(timeLeft / 60) % 60;
+            s2 = s2 < 10 ? "0"+s2 : s2;
+            m2 = m2 < 10 ? "0"+m2 : m2;
+         console.log(m2,s2);
+         //Add 0 if less than 10
+         if (s < 10) {
+             s = '0' + s;
             }
-            $('#duration').html(m + '.' + s);
+            $('#duration').html(m + ':' + s);
+            $('#duration-left').html(m2 + ':' + s2);
             var value = 0;
             if (audio.currentTime > 0) {
                 value = ((100 / audio.duration) * audio.currentTime);

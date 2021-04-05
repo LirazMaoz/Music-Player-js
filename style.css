@@ -132,13 +132,15 @@ background: white;
 }
 
 #progressbar {
-    width: 80%;
-    margin-left: 2%;
+    width: 61%;
+    margin-left: 19%;
     margin-bottom: 20px;
     margin-top: 9px;
     height: 10px;
-    background:url("pics/progress_bg.png") no-repeat ;
+    background: url(pics/progress_bg.png);
     float: left;
+    background-repeat: no-repeat;
+    background-size: 100% 80%;
 }
 
 #progress {
@@ -147,8 +149,14 @@ background: white;
     display: inline-block;
 
 }
-
-#duration {
+#duration{
+    position: absolute;
+    padding: 4px 8px;
+    background: white;
+    border-radius: 10px;
+   left: 2%; 
+}
+#duration-left {
     position: absolute;
     top: 0;
     right: 10px;
