@@ -13,11 +13,11 @@ $(document).ready(function () {
             id: 2,
             author: 'Dua Lipa',
             nameSong: "Don't Start Now",
-            image: 'cover4.png',
+            image: 'cover4.jpg',
         },
         {
             id: 3,
-            author: 'The Weekend',
+            author: 'The Weeknd',
             nameSong: "Blinding Lights",
             image: 'cover2.png',
         },
@@ -25,7 +25,7 @@ $(document).ready(function () {
             id: 4,
             author: 'Years Around The Sun',
             nameSong: "Miles Away",
-            image: 'cover3.png',
+            image: 'cover3.jpg',
         }
     ]
 
@@ -69,6 +69,7 @@ $(document).ready(function () {
             $('#audio-info>.artist').html(filt[0].author);
             $('img.cover').attr('src', 'pics/cover/' + filt[0].image);
             audio = new Audio('songs/'+filt[0].author + ' - ' + filt[0].nameSong + '.mp3')
+            console.log(audio);
             audio.play();
             $('#play').hide();
             $('#pause').show();
@@ -80,7 +81,6 @@ $(document).ready(function () {
         //Insert Cover Photo
         $('img.cover').attr('src', 'pics/cover/' + cover);
     }
-    
 
 
 
