@@ -30,7 +30,8 @@ $(document).ready(function () {
     ]
 
     filteredSongs = songData.map(song => {
-        $('#playlist').append('<li id="' + song.nameSong + song.id + '">' + song.nameSong + '</li>')
+        var id = song.nameSong.split(' ').join('-')
+        $('#playlist').append('<li id="' + id + song.id + '">' + song.nameSong + '</li>')
     });
 
     $('#pause').hide();
