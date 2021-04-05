@@ -30,7 +30,7 @@ $(document).ready(function () {
     ]
 
     filteredSongs = songData.map(song => {
-        var id = song.nameSong.split(' ').join('-')
+        var id = song.nameSong.split(' ').join('-').toLowerCase()
         $('#playlist').append('<li id="' + id + song.id + '">' + song.nameSong + '</li>')
     });
 
