@@ -133,13 +133,14 @@ background: white;
 }
 
 #progressbar {
-    width: 80%;
+    width: 100%;
     margin-left: 2%;
     margin-bottom: 20px;
     margin-top: 9px;
     height: 10px;
     background:url("pics/progress_bg.png") no-repeat ;
     float: left;
+
 }
 
 #progress {
