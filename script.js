@@ -175,7 +175,6 @@ if(key === songData.length){
             m2 = Math.floor(timeLeft / 60) % 60;
             s2 = s2 < 10 ? "0"+s2 : s2;
             m2 = m2 < 10 ? "0"+m2 : m2;
-         console.log(m2,s2);
          //Add 0 if less than 10
          if (s < 10) {
              s = '0' + s;
